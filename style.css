@@ -85,13 +85,13 @@ button {
     color: var(--white);
 }
 
-.btn-solid, .btn-buy, .btn-large {
+.btn-solid, .btn-large {
     background: var(--primary);
     color: var(--white);
     padding: 0.5rem 1.2rem;
 }
 
-.btn-solid:hover, .btn-buy:hover, .btn-large:hover {
+.btn-solid:hover, .btn-large:hover {
     background: var(--primary-hover);
 }
 
@@ -99,12 +99,6 @@ button {
     padding: 1rem 2rem;
     font-size: 1.1rem;
     margin-top: 2rem;
-}
-
-.btn-buy {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.8rem;
 }
 
 /* Page Routing Logic */
@@ -196,6 +190,46 @@ h2 {
     font-weight: bold;
     color: var(--primary);
     margin: 1rem 0;
+}
+
+/* Product Actions (View/Buy Buttons) */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.btn-view {
+    flex: 1;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-view:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+.btn-buy-small {
+    flex: 1;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn-buy-small:hover {
+    background-color: var(--primary-hover);
 }
 
 /* Merchant Contact Section */
