@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempest Web Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo" onclick="navigateTo('home')">TempestWeb</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="#" onclick="navigateTo('about')">About Us</a></li>
+            <li><a href="#" onclick="navigateTo('products')">Products</a></li>
+            <li><a href="#" onclick="navigateTo('merchant')">Contact Merchant</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-outline" onclick="navigateTo('login')">Log In</button>
+            <button class="btn-solid" onclick="navigateTo('register')">Register</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>Elevate Your Digital Presence</h1>
+                <p>Premium website templates and custom web solutions designed to scale your business.</p>
+                <button class="btn-large" onclick="navigateTo('products')">View Our Websites</button>
+            </div>
+        </section>
+
+        <!-- ABOUT US PAGE -->
+        <section id="about" class="page">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>Welcome to Tempest Web Solutions. We specialize in building high-performance, responsive, and visually stunning websites. Whether you need a simple landing page or a complex e-commerce platform, our crafted templates give you the perfect head start.</p>
+                <p>Our mission is to make premium web design accessible, fast, and easy to deploy for businesses of all sizes.</p>
+            </div>
+        </section>
+
+        <!-- PRODUCTS PAGE -->
+        <section id="products" class="page">
+            <h2>Our Website Templates</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60" alt="E-Commerce Website">
+                    <h3>E-Commerce Pro</h3>
+                    <p>A fully featured online store template.</p>
+                    <div class="price">₱ 15,000</div>
+                    <button class="btn-buy" onclick="navigateTo('merchant')">Buy This Website</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500&auto=format&fit=crop&q=60" alt="Portfolio Website">
+                    <h3>Creative Portfolio</h3>
+                    <p>Perfect for freelancers and creatives to showcase work.</p>
+                    <div class="price">₱ 8,500</div>
+                    <button class="btn-buy" onclick="navigateTo('merchant')">Buy This Website</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=60" alt="Corporate Website">
+                    <h3>Corporate Business</h3>
+                    <p>Clean, professional layout for established businesses.</p>
+                    <div class="price">₱ 12,000</div>
+                    <button class="btn-buy" onclick="navigateTo('merchant')">Buy This Website</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MERCHANT / CONTACT PAGE -->
+        <section id="merchant" class="page">
+            <h2>Complete Your Purchase</h2>
+            <p class="merchant-subtitle">Reach out to us through any of the channels below to finalize your website purchase or ask questions!</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:tempestweb@gmail.com" class="contact-card">
+                    <h3>📧 Gmail</h3>
+                    <p>tempestweb@gmail.com</p>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="contact-card">
+                    <h3>📘 Facebook</h3>
+                    <p>DM our Official Page</p>
+                </a>
+                <a href="tel:+639123456789" class="contact-card">
+                    <h3>📱 Phone</h3>
+                    <p>+63 912 345 6789</p>
+                </a>
+                <a href="https://t.me/tempestweb" target="_blank" class="contact-card">
+                    <h3>✈️ Telegram</h3>
+                    <p>@tempestweb</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- LOGIN PAGE -->
+        <section id="login" class="page">
+            <div class="form-container">
+                <h2>Welcome Back</h2>
+                <form onsubmit="handleAuth(event, 'login')">
+                    <div class="input-group">
+                        <label>Email (Gmail)</label>
+                        <input type="email" required placeholder="you@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-solid form-btn">Log In</button>
+                    <p class="switch-auth">Don't have an account? <a href="#" onclick="navigateTo('register')">Register here</a></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- REGISTER PAGE -->
+        <section id="register" class="page">
+            <div class="form-container">
+                <h2>Create an Account</h2>
+                <form onsubmit="handleAuth(event, 'register')">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label>Email (Gmail)</label>
+                        <input type="email" required placeholder="you@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" required placeholder="Create a password">
+                    </div>
+                    <button type="submit" class="btn-solid form-btn">Register</button>
+                    <p class="switch-auth">Already registered? <a href="#" onclick="navigateTo('login')">Log In here</a></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
